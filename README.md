@@ -19,6 +19,7 @@ Plain HTML/CSS — no build tools needed. Edit a file, save, refresh.
 - **Publish a note** — copy `notes/sample-note.html` to `notes/your-title.html`, edit the title/date/content, then add a `<li>` link on `notes.html` (and optionally `index.html`).
 - **Fix your links** — replace the placeholder LinkedIn/GitHub URLs in the footer of every page.
 - **Change the accent color** — edit `--accent` at the top of `css/style.css`.
+- **Add a real photo** — drop an image at `assets/photo.jpg`, then in `index.html` replace `<div class="avatar-placeholder">FW</div>` with `<img src="assets/photo.jpg" alt="Finn Wilson-Devane" class="avatar-img">`. Use a square-ish photo (it gets cropped into a circle).
 
 ## Preview locally
 
