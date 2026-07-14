@@ -21,6 +21,7 @@ Plain HTML/CSS — no build tools needed. Edit a file, save, refresh.
 - **Change the accent color** — edit `--accent` at the top of `css/style.css`.
 - **Add a real photo** — drop an image at `assets/photo.jpg`, then in `index.html` replace `<div class="avatar-placeholder">FW</div>` with `<img src="assets/photo.jpg" alt="Finn Wilson-Devane" class="avatar-img">`. Use a square-ish photo (it gets cropped into a circle).
 - **Replace the resume** — `assets/resume.pdf` is a placeholder (export your real CV as PDF and overwrite that exact file/filename — the "Resume" nav link on every page already points to it, so nothing else needs to change).
+- **Update the share preview image** — `assets/og-image.png` is what shows up when someone pastes your site link into LinkedIn/Slack/iMessage. If you change your name/role, edit the `NAME`/`LINE1`/`LINE2` constants in `tools/generate_og_image.py` and re-run it: `pip3 install --user Pillow` (one-time), then `python3 tools/generate_og_image.py`.
 
 ## Preview locally
 
