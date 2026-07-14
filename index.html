@@ -8,11 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
-
     <nav>
       <a class="brand" href="index.html">Finn Wilson-Devane</a>
       <div class="links">
@@ -21,34 +21,82 @@
         <a href="notes.html">Notes</a>
       </div>
     </nav>
+  </div>
 
-    <!-- ================= HERO =================
-         EDIT ME: replace the tagline below with one sentence about
-         who you are and what you're looking for.
+  <!-- ================= SCENIC HERO =================
+       EDIT ME: badge text and headline/subtitle live below.
 
-         PHOTO: to swap the placeholder avatar for a real headshot,
-         put an image at assets/photo.jpg, then replace the
-         <div class="avatar-placeholder">…</div> below with:
-         <img src="assets/photo.jpg" alt="Finn Wilson-Devane" class="avatar-img"> -->
-    <section class="hero">
-      <div class="hero-flex">
-        <div class="hero-text">
-          <h1>Hi, I'm Finn <span class="wave">👋</span></h1>
-          <p class="role">Production Engineer Summer Student at Gran Tierra Energy · Chemical Engineering Student at the University of Ottawa</p>
-          <p class="lede">
-            This site is where I share what I'm building and learning — recent
-            projects, class notes, and the occasional write-up.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="projects.html">See my projects</a>
-            <a class="btn btn-secondary" href="mailto:finnwilsondevane@gmail.com">Get in touch</a>
-          </div>
-        </div>
-        <div class="avatar-wrap">
-          <div class="avatar-placeholder">FW</div>
-        </div>
+       PHOTO: to swap the placeholder avatar for a real headshot,
+       put an image at assets/photo.jpg, then replace
+       <div class="avatar-placeholder">…</div> with:
+       <img src="assets/photo.jpg" alt="Finn Wilson-Devane" class="avatar-img"> -->
+  <section class="hero-scenic">
+    <div class="hero-bg-wrap">
+      <svg class="hero-bg" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2f3d52"/>
+            <stop offset="42%" stop-color="#6b7a9a"/>
+            <stop offset="68%" stop-color="#d99a72"/>
+            <stop offset="100%" stop-color="#f6c99a"/>
+          </linearGradient>
+          <radialGradient id="sun" cx="50%" cy="100%" r="60%">
+            <stop offset="0%" stop-color="#ffe3b3" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#ffe3b3" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+        </defs>
+
+        <rect width="1600" height="700" fill="url(#sky)"/>
+        <ellipse cx="820" cy="470" rx="480" ry="260" fill="url(#sun)"/>
+
+        <path d="M0,420 L100,340 L220,380 L340,300 L460,360 L580,310 L700,370 L820,320 L940,380 L1060,330 L1180,390 L1300,340 L1420,400 L1600,360 L1600,700 L0,700 Z" fill="#5b6c86" opacity="0.55"/>
+        <rect x="0" y="400" width="1600" height="60" fill="#f6e2c8" opacity="0.18" filter="url(#soft)"/>
+
+        <path d="M0,480 L120,420 L260,460 L380,400 L500,450 L640,410 L760,460 L900,420 L1040,470 L1180,430 L1320,480 L1460,440 L1600,470 L1600,700 L0,700 Z" fill="#3d4a5e" opacity="0.8"/>
+        <rect x="0" y="470" width="1600" height="50" fill="#f6e2c8" opacity="0.12" filter="url(#soft)"/>
+
+        <path d="M0,560 L140,500 L280,540 L420,490 L560,530 L700,500 L840,540 L980,500 L1120,545 L1260,505 L1400,540 L1600,510 L1600,700 L0,700 Z" fill="#222b38"/>
+
+        <g fill="#1a212b">
+          <polygon points="1330,560 1360,470 1390,560"/>
+          <polygon points="1360,570 1400,455 1440,570"/>
+          <polygon points="1410,565 1445,480 1480,565"/>
+          <polygon points="1460,575 1500,460 1545,575"/>
+          <polygon points="1500,570 1535,490 1570,570"/>
+          <rect x="1355" y="560" width="8" height="30"/>
+          <rect x="1440" y="565" width="8" height="30"/>
+        </g>
+      </svg>
+
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-badge"><span class="dot"></span>Currently: Production Eng Summer Student @ Gran Tierra Energy</div>
+      <h1 class="hero-serif-title">Hi, I'm Finn.</h1>
+      <p class="hero-subtitle">
+        Chemical Engineering student at the University of Ottawa, sharing the
+        projects I build and the notes I take along the way.
+      </p>
+      <div class="cta-row hero-cta">
+        <a class="btn btn-primary" href="projects.html">See my projects</a>
+        <a class="btn btn-secondary" href="mailto:finnwilsondevane@gmail.com">Get in touch</a>
       </div>
-    </section>
+    </div>
+
+    <div class="hero-avatar-card">
+      <div class="avatar-placeholder">FW</div>
+      <div>
+        <strong>Finn Wilson-Devane</strong>
+        <span>Chem Eng · Production Eng Intern</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-fade"></div>
+
+  <div class="container post-hero">
 
     <!-- ================= FEATURED PROJECTS =================
          EDIT ME: swap these two cards for your real projects.

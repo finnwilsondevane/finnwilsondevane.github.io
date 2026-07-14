@@ -7,11 +7,12 @@
   --bg: #ffffff;
   --text: #1a1a1a;
   --text-muted: #6b7280;
-  --accent: #2563eb;
-  --accent-soft: #eff4ff;
+  --accent: #b8622f;
+  --accent-soft: #fbece0;
   --border: #e5e7eb;
   --card-bg: #fafafa;
   --max-width: 700px;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +20,8 @@
     --bg: #111214;
     --text: #ececec;
     --text-muted: #9ca3af;
-    --accent: #7aa2ff;
-    --accent-soft: #1b2333;
+    --accent: #e8a06b;
+    --accent-soft: #2b2015;
     --border: #2a2c31;
     --card-bg: #191b1e;
   }
@@ -74,19 +75,10 @@ nav .links a.active {
   color: var(--accent);
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero (plain text header, used on Projects/Notes pages) ---------- */
 .hero {
   padding: 72px 0 56px;
 }
-
-.hero-flex {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  justify-content: space-between;
-}
-
-.hero-text { flex: 1; min-width: 0; }
 
 .hero h1 {
   font-size: 2.5rem;
@@ -97,13 +89,6 @@ nav .links a.active {
 }
 
 .hero h1 .wave { display: inline-block; }
-
-.hero p.role {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 16px;
-}
 
 .hero p.lede {
   font-size: 1.15rem;
@@ -118,9 +103,147 @@ nav .links a.active {
   margin-bottom: 10px;
 }
 
-/* ---------- Avatar ---------- */
-.avatar-wrap { flex-shrink: 0; }
+/* ---------- Scenic hero (homepage only) ---------- */
+.hero-scenic {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fdf6ee;
+}
 
+.hero-bg-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 14, 20, 0.1) 0%, rgba(10, 14, 20, 0.05) 45%, rgba(10, 14, 20, 0.85) 100%);
+}
+
+/* Bridges the hero's dark tones into the page background so it fades
+   instead of cutting straight to black/white. */
+.hero-fade {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(180deg, #1b2330 0%, var(--bg) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 90px;
+  padding-bottom: 88px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10, 14, 20, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.hero-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7fd8a4;
+  flex-shrink: 0;
+}
+
+.hero-serif-title {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  max-width: 46ch;
+  color: rgba(253, 246, 238, 0.85);
+  margin-bottom: 30px;
+}
+
+.hero-cta a {
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 10px;
+  border-radius: 99px;
+}
+
+.hero-cta .btn-primary {
+  background: #fdf6ee;
+  color: #201a12;
+}
+
+.hero-cta .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fdf6ee;
+}
+
+.hero-avatar-card {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 20px 12px 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  white-space: nowrap;
+}
+
+.hero-avatar-card .avatar-placeholder,
+.hero-avatar-card .avatar-img {
+  width: 48px;
+  height: 48px;
+  font-size: 1.1rem;
+  border-width: 2px;
+}
+
+.hero-avatar-card strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.hero-avatar-card span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.post-hero { padding-top: 64px; }
+
+/* ---------- Avatar ---------- */
 .avatar-placeholder,
 .avatar-img {
   width: 160px;
@@ -133,7 +256,7 @@ nav .links a.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--accent), #93b4ff);
+  background: linear-gradient(135deg, var(--accent), #e8a06b);
   color: #fff;
   font-size: 2.4rem;
   font-weight: 800;
@@ -350,8 +473,17 @@ footer a:hover { color: var(--accent); }
 @media (max-width: 600px) {
   .hero { padding: 48px 0 36px; }
   .hero h1 { font-size: 1.9rem; }
-  .hero-flex { flex-direction: column-reverse; gap: 24px; }
-  .avatar-placeholder, .avatar-img { width: 120px; height: 120px; font-size: 1.9rem; }
   .card-grid { grid-template-columns: 1fr; }
   nav .links a { margin-left: 14px; }
+
+  .hero-scenic { min-height: 460px; }
+  .hero-content { padding-top: 56px; padding-bottom: 68px; }
+  .hero-serif-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 1rem; }
+  .hero-avatar-card { padding: 10px 16px 10px 10px; gap: 10px; }
+  .hero-avatar-card .avatar-placeholder,
+  .hero-avatar-card .avatar-img { width: 40px; height: 40px; font-size: 0.95rem; }
+  .hero-avatar-card strong { font-size: 0.85rem; }
+  .hero-avatar-card span { font-size: 0.72rem; }
+  .post-hero { padding-top: 56px; }
 }
