@@ -20,6 +20,7 @@ Plain HTML/CSS — no build tools needed. Edit a file, save, refresh.
 - **Fix your links** — replace the placeholder LinkedIn/GitHub URLs in the footer of every page.
 - **Change the accent color** — edit `--accent` at the top of `css/style.css`.
 - **Add a real photo** — drop an image at `assets/photo.jpg`, then in `index.html` replace `<div class="avatar-placeholder">FW</div>` with `<img src="assets/photo.jpg" alt="Finn Wilson-Devane" class="avatar-img">`. Use a square-ish photo (it gets cropped into a circle).
+- **Replace the resume** — `assets/resume.pdf` is a placeholder (export your real CV as PDF and overwrite that exact file/filename — the "Resume" nav link on every page already points to it, so nothing else needs to change).
 
 ## Preview locally
 
