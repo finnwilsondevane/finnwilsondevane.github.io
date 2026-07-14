@@ -19,7 +19,7 @@ Plain HTML/CSS — no build tools needed. Edit a file, save, refresh.
 - **Publish a note** — copy `notes/sample-note.html` to `notes/your-title.html`, edit the title/date/content, then add a `<li>` link on `notes.html` (and optionally `index.html`).
 - **Fix your links** — replace the placeholder LinkedIn/GitHub URLs in the footer of every page.
 - **Change the accent color** — edit `--accent` at the top of `css/style.css`.
-- **Add a real photo** — drop an image at `assets/photo.jpg`, then in `index.html` replace `<div class="avatar-placeholder">FW</div>` with `<img src="assets/photo.jpg" alt="Finn Wilson-Devane" class="avatar-img">`. Use a square-ish photo (it gets cropped into a circle).
+- **Swap the photo** — overwrite `assets/photo.jpg` with a new square (or square-ish) image, centered on your face. No HTML changes needed.
 - **Replace the resume** — `assets/resume.pdf` is a placeholder (export your real CV as PDF and overwrite that exact file/filename — the "Resume" nav link on every page already points to it, so nothing else needs to change).
 - **Update the share preview image** — `assets/og-image.png` is what shows up when someone pastes your site link into LinkedIn/Slack/iMessage. If you change your name/role, edit the `NAME`/`LINE1`/`LINE2` constants in `tools/generate_og_image.py` and re-run it: `pip3 install --user Pillow` (one-time), then `python3 tools/generate_og_image.py`.
 
