@@ -54,15 +54,17 @@
          EDIT ME: to publish a new note:
          1. Copy notes/sample-note.html to notes/your-note-title.html
          2. Edit its title, date, and content
-         3. Add one <li> line below (newest at the top)
-         4. Optionally add the same line to the "Recent notes" list on index.html -->
+         3. Replace the <p class="empty-state"> below with a <ul class="note-list">
+            and one <li> per note (newest at the top):
+              <ul class="note-list">
+                <li>
+                  <a href="notes/your-note-title.html">Note title</a>
+                  <span class="date">Month Year</span>
+                </li>
+              </ul>
+         4. Optionally add the same <li> to the "Recent notes" list on index.html -->
     <section>
-      <ul class="note-list">
-        <li>
-          <a href="notes/sample-note.html">Sample note — how to add your own</a>
-          <span class="date">Jul 2026</span>
-        </li>
-      </ul>
+      <p class="empty-state">Coming soon — I'll be turning past slides and notes into guides here.</p>
     </section>
 
     <footer>
