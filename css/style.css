@@ -29,8 +29,6 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
-
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   background: var(--bg);
@@ -144,11 +142,26 @@ nav .links a.active {
 }
 
 /* Bridges the hero's dark tones into the page background so it fades
-   instead of cutting straight to black/white. */
+   instead of cutting straight to black/white. Uses an eased alpha curve
+   over the real --bg color rather than interpolating raw hex values —
+   a straight navy-to-white lerp leaves a muddy grey plateau in light mode. */
 .hero-fade {
   width: 100%;
   height: 160px;
-  background: linear-gradient(180deg, #1b2330 0%, var(--bg) 100%);
+  background: var(--bg);
+  position: relative;
+}
+
+.hero-fade::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(27, 35, 48, 0.95) 0%,
+    rgba(27, 35, 48, 0.6) 35%,
+    rgba(27, 35, 48, 0.22) 65%,
+    rgba(27, 35, 48, 0) 100%
+  );
 }
 
 .hero-content {
