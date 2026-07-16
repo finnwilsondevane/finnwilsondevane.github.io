@@ -11,12 +11,13 @@ Plain HTML/CSS — no build tools needed. Edit a file, save, refresh.
 | `notes.html` | List of all notes |
 | `notes/sample-note.html` | Template for a note — copy it to make a new one |
 | `css/style.css` | All styling. Colors live in the `:root` variables at the top |
+| `sitemap.xml` / `robots.txt` | Tells Google what pages exist. Add new notes here when you publish them |
 
 ## Common edits
 
 - **Update your intro / about** — edit the text in `index.html` (look for `EDIT ME` comments).
 - **Add a project** — copy a `<div class="card">…</div>` block in `projects.html` and edit it. Put your best two on `index.html` too.
-- **Publish a note** — copy `notes/sample-note.html` to `notes/your-title.html`, edit the title/date/content, then add a `<li>` link on `notes.html` (and optionally `index.html`).
+- **Publish a note** — copy `notes/sample-note.html` to `notes/your-title.html`, remove the `<meta name="robots" content="noindex, nofollow">` line (that's what keeps the template out of search results), edit the title/date/content, then add a `<li>` link on `notes.html` (and optionally `index.html`) and a `<url>` entry in `sitemap.xml`.
 - **Fix your links** — replace the placeholder LinkedIn/GitHub URLs in the footer of every page.
 - **Change the accent color** — edit `--accent` at the top of `css/style.css`.
 - **Swap the photo** — overwrite `assets/photo.jpg` with a new square (or square-ish) image, centered on your face. No HTML changes needed.
