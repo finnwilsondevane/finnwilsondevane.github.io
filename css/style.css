@@ -414,6 +414,19 @@ h2.section-title .see-all {
   margin-top: 4px;
 }
 
+/* ---------- Skills ---------- */
+.skills-group { margin-bottom: 20px; }
+.skills-group:last-child { margin-bottom: 0; }
+
+.skills-group h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
 /* ---------- Note list ---------- */
 .note-list { list-style: none; }
 
