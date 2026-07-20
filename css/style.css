@@ -414,6 +414,14 @@ h2.section-title .see-all {
   margin-top: 4px;
 }
 
+/* Used for credentials/certifications — visually distinct from the
+   accent-colored skill pills so the two aren't read as the same thing. */
+.tags-muted span {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
 /* ---------- Skills ---------- */
 .skills-group { margin-bottom: 20px; }
 .skills-group:last-child { margin-bottom: 0; }
@@ -425,12 +433,6 @@ h2.section-title .see-all {
   letter-spacing: 0.04em;
   color: var(--text-muted);
   margin-bottom: 8px;
-}
-
-.skills-certs {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-top: 4px;
 }
 
 /* ---------- Note list ---------- */
