@@ -427,6 +427,12 @@ h2.section-title .see-all {
   margin-bottom: 8px;
 }
 
+.skills-certs {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
 /* ---------- Note list ---------- */
 .note-list { list-style: none; }
 
